@@ -215,7 +215,7 @@ background-position: 50% 50%;
   position: absolute;
   /* border: 2px solid; */
   width: 40%;
-  height: 40%;
+  height: 45%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -227,8 +227,9 @@ background-position: 50% 50%;
   background-color: #2a313d;
   box-shadow: 0px 8px 10px -2px rgb(34, 38, 46);
   transition: 1s;
-  animation: h-load 0.6s ease-out;  
+  animation: h-load 1s ease-out;  
   animation-fill-mode: forwards;
+
   
 }
 
@@ -236,11 +237,19 @@ background-position: 50% 50%;
   0%{
       /* width:30%;
       height: 25%; */
+      width: 40%;
+  }
+
+  50%{
+    width: 45%;
+    height:45%;
+
   }
 
   100%{
-      width: 50%;
-      height: 80%;
+
+    width: 45%;
+    height: 80%;
   }
 } 
 
@@ -261,7 +270,21 @@ background-position: 50% 50%;
   /* background-color: #2a313d; */
   /* box-shadow: 0px 8px 10px -2px rgb(34, 38, 46); */
   /* transition: 1s; */
+  opacity:0;
+  animation: i-load 1s ease-out; 
+  animation-delay: 1s; 
+  animation-fill-mode: forwards;
 }
+
+@keyframes i-load{
+  0%{
+    opacity:0;
+  }
+
+  100%{
+    opacity:1;
+  }
+} 
 
 
 
@@ -269,9 +292,9 @@ background-position: 50% 50%;
 /* image boxes */
 #imageBx1{
   position: absolute;
-  width:80%;
-  height:60%;
-  top:50%;
+  width:70%;
+  height:55%;
+  top:57%;
   left:53.5%;
   transform:translate(-50%,-50%);
   /* border: 1px solid blue; */
@@ -282,9 +305,9 @@ background-position: 50% 50%;
 
 #imageBx2{
   position: absolute;
-  width:80%;
-  height:60%;
-  top:50%;
+  width:70%;
+  height:55%;
+  top:57%;
   left: 46.5%;
   transform:translate(-50%,-50%);
   /* border: 1px solid blue; */
@@ -294,8 +317,8 @@ background-position: 50% 50%;
 
 #imageBx3{
   position: absolute;
-  width:80%;
-  height:60%;
+  width:70%;
+  height:55%;
   top:35%;
   left: 53.5%;
   transform:translate(-50%,-50%);
@@ -306,8 +329,8 @@ background-position: 50% 50%;
 
 #imageBx4{
   position: absolute;
-  width:80%;
-  height:60%;
+  width:70%;
+  height:55%;
   top:35%;
   left:46.5%;
   transform:translate(-50%,-50%);
@@ -321,20 +344,22 @@ background-position: 50% 50%;
 /* projects names*/
 #projectName1,#projectName2{
   position: absolute;
-  top:90%;
+  top:92%;
   left:50%;
   transform:translate(-50%,-50%);
   color:rgb(252, 221, 174);
+  font-size:large;
   /* border: 1px solid blue; */
 }
 
 
 #projectName3,#projectName4{
   position: absolute;
-  top:75%;
+  top:70.5%;
   left:50%;
   transform:translate(-50%,-50%);
   color:rgb(252, 221, 174);
+  font-size:large;
   /* border: 1px solid blue; */
 }
 
@@ -383,6 +408,7 @@ background-position: 50% 50%;
   visibility:visible;
   opacity:1;
   left:42.5%;
+  -webkit-font-smoothing: antialiased;
 }
 
 #imageBx1:hover #pic1, #imageBx2:hover #pic2, 
@@ -414,7 +440,7 @@ background-position: 50% 50%;
 .explan{
   /* padding-top: 15px;
   padding-left: 10px; */
-  font-size:medium;
+  font-size:small;
   /* color:rgb(240, 230, 215); */
   color: #2a313d;
 }
@@ -422,17 +448,18 @@ background-position: 50% 50%;
 .techUsed{
   /* padding-top: 5px;
   padding-left: 10px; */
-  padding-top: 7.5px;
-  font-size:medium;
+  padding-top: 5px;
+  font-size:small;
   /* color:rgb(240, 230, 215); */
-  color: #2a313d;
+  /* color: #2a313d; */
+  color:grey;
 }
 
 
 .gitLink{
   /* color:rgb(240, 230, 215); */
   color: #2a313d;
-  font-size:medium;
+  font-size:small;
   /* padding-top:20px; */
 }
 
@@ -442,13 +469,19 @@ background-position: 50% 50%;
 }
 
 #link{
-  padding-top:10px;
+  padding-top:8px;
+}
+
+#explan3, #gitLink3, #techUsed3{
+  font-size:70%
 }
 
 
+/******************** MEDIA QUERIES *******************/
 
-@media (max-width:1100px){
-  .homeContainer{
+
+@media (max-width:1100px) and (min-width:601px){
+  /* .homeContainer{
       width:75%;
   }
   .homeContainer h1{
@@ -462,54 +495,71 @@ background-position: 50% 50%;
   }
   .homeContainer:hover {
       /* transform:scale(1.5) translate(-75%,0%); */
-      width:75%;
+      /* width:75%; */
       /* height:40%; */
-  }
+  /* } */
 
-  .homeContainer:hover #avatar{
+  /* .homeContainer:hover #avatar{
       top:37.5%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width:30%;
+      width:50%;
       height:45%;
       transition-delay: 0.2s;
       opacity: 1;
       visibility: visible;
-  }
-
-  .infoBx{
-    width:75vw;
-  }
-
-  #pBox{
-    width:100%;
-    font-size:150%;
-  }
-
-  info
+  } */ 
 
   .projectsContainer{
-
-      grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1,1fr);
+      
   }
+
+  @keyframes h-load{
+    0%{
+        /* width:30%;
+        height: 25%; */
+        width: 40%;
+    }
+  
+    50%{
+      width: 45%;
+      height:45%;
+  
+    }
+  
+    100%{
+  
+      width: 70%;
+      height: 80%;
+    }
+  } 
 
   #imageBx1, #imageBx2, #imageBx3, #imageBx4{
       top:45%;
       left:50%;
-      width:55%;
-      height:80%;
+      width:50%;
+      height:70%;
   }
 
   #projectName1,#projectName2,#projectName3, #projectName4{
-      top:92%;
+      top:90%;
       font-size:small;
   }
 
   .explan, .techUsed, .gitLink{
-      font-size:x-small;
+      font-size:xx-small;
+  }
+
+  #explan3, #gitLink3, #techUsed3{
+    font-size:40%
+  }
+  #explan4, #gitLink4, #techUsed4{
+    font-size:40%;
   }
 
 }
+
 
 @media (max-width:600px) and (min-width:471px){
   .homeContainer{
@@ -542,9 +592,28 @@ background-position: 50% 50%;
   }
 
   .projectsContainer{
-
       grid-template-columns: repeat(1,1fr);
   }
+
+  @keyframes h-load{
+    0%{
+        /* width:30%;
+        height: 25%; */
+        width: 40%;
+    }
+  
+    50%{
+      width: 45%;
+      height:45%;
+  
+    }
+  
+    100%{
+  
+      width: 70%;
+      height: 80%;
+    }
+  } 
 
   #imageBx1, #imageBx2, #imageBx3, #imageBx4{
       top:45%;
@@ -559,7 +628,11 @@ background-position: 50% 50%;
   }
 
   .explan, .techUsed, .gitLink{
-      font-size:x-small;
+      font-size:xx-small;
+  }
+
+  #explan3, #gitLink3, #techUsed3{
+    font-size:55%;
   }
 
 }
@@ -594,7 +667,10 @@ background-position: 50% 50%;
       visibility: visible;
   }
 
-  
+  .projectsContainer{
+    grid-template-columns: repeat(1,1fr);
+  }
+
   #cont1{
     grid-column-start:1;
     grid-column-end:3;
@@ -613,6 +689,7 @@ background-position: 50% 50%;
       0%{
           /* width:30%;
           height: 25%; */
+          width:45%
       }
   
       100%{
@@ -638,5 +715,14 @@ background-position: 50% 50%;
   .explan, .techUsed, .gitLink{
       font-size:xx-small;
   }
+
+  #explan3, #gitLink3, #techUsed3{
+    font-size:40%;
+  }
+
+  #explan4, #gitLink4, #techUsed4{
+    font-size:40%;
+  }
+  
 
 }
