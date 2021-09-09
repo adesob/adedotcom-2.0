@@ -51,7 +51,6 @@
 }
 
 .homeContainer:hover {
-  /* transform:scale(1.5) translate(-75%,0%); */
   width:40%;
   height:45%;
 }
@@ -481,8 +480,8 @@ background-position: 50% 50%;
 
 
 @media (max-width:1100px) and (min-width:601px){
-  /* .homeContainer{
-      width:75%;
+  .homeContainer{
+      width:55%;
   }
   .homeContainer h1{
       font-size: 225%;
@@ -494,10 +493,9 @@ background-position: 50% 50%;
       font-size: 14px;
   }
   .homeContainer:hover {
-      /* transform:scale(1.5) translate(-75%,0%); */
-      /* width:75%; */
-      /* height:40%; */
-  /* } */
+      width:70%;
+      height:40%;
+   }
 
   /* .homeContainer:hover #avatar{
       top:37.5%;
@@ -512,28 +510,34 @@ background-position: 50% 50%;
 
   .projectsContainer{
     grid-template-columns: repeat(1,1fr);
-      
   }
 
   @keyframes h-load{
     0%{
         /* width:30%;
         height: 25%; */
-        width: 40%;
+      width: 70%;
     }
   
     50%{
-      width: 45%;
+      width: 50%;
       height:45%;
   
     }
   
     100%{
-  
-      width: 70%;
+      width:50%;
       height: 80%;
     }
-  } 
+  }
+
+  .infoBx{
+    width:70vw;
+    height:40vh;
+  }
+
+  
+  
 
   #imageBx1, #imageBx2, #imageBx3, #imageBx4{
       top:45%;
@@ -613,7 +617,11 @@ background-position: 50% 50%;
       width: 70%;
       height: 80%;
     }
-  } 
+  }
+  
+  .infoBx{
+    width:75vw;
+  }
 
   #imageBx1, #imageBx2, #imageBx3, #imageBx4{
       top:45%;
@@ -639,7 +647,7 @@ background-position: 50% 50%;
 
 @media (max-width:470px) and (min-width:0px){
   .homeContainer{
-      width:75%;
+      width:90%;
   }
   .homeContainer h1{
       font-size: 225%;
@@ -652,23 +660,31 @@ background-position: 50% 50%;
   }
   .homeContainer:hover {
       /* transform:scale(1.5) translate(-75%,0%); */
-      width:75%;
+      width:90%;
+      height:40%;
       /* height:40%; */
-  }
-
-  .homeContainer:hover #avatar{
-      top:37.5%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width:50%;
-      height:45%;
-      transition-delay: 0.2s;
-      opacity: 1;
-      visibility: visible;
   }
 
   .projectsContainer{
     grid-template-columns: repeat(1,1fr);
+  }
+
+  @keyframes h-load{
+    0%{
+      width:90%;
+      height:40%;
+    }
+  
+    100%{
+      width:90%;
+      height: 80%;
+    }
+  }
+
+
+  .infoBx{
+    width:80vw;
+    height:40vh;
   }
 
   #cont1{
@@ -685,21 +701,6 @@ background-position: 50% 50%;
   }
 
   
-  @keyframes h-load{
-      0%{
-          /* width:30%;
-          height: 25%; */
-          width:45%
-      }
-  
-      100%{
-          width: 80%;
-          height: 80%;
-      }
-  }
-
-  
-
   #imageBx1, #imageBx2, #imageBx3, #imageBx4{
       top:45%;
       left:50%;
