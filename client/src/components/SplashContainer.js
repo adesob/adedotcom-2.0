@@ -40,7 +40,7 @@ const SplashContainer = (props) => {
 
           {/* Render Projects */}
             {contState &&
-              (projects.map((project, index) => <ProjContent key = {index} itemNum = {index + 1} project = {project}/>)) 
+              (projects.map((project, index) => <ProjContent statChange = {() => {setContState(!contState)}} key = {index} itemNum = {index + 1} project = {project}/>)) 
             }
             
           
