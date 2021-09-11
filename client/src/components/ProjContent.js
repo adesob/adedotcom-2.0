@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const ProjContent = (props) => {
     
@@ -16,6 +17,14 @@ const ProjContent = (props) => {
             </div>
         
             <h1 id={"projectName" + props.itemNum} className="projectName">{props.project.title}</h1>
+            {props.itemNum === 1 && <div id = "prTitle">
+                                        <div><Link to="/" id = "bkBtn" onClick = {() => { 
+                                                                    // props.projectsClick(); 
+                                                                    props.statChange();
+                                                                    }}><i class="fa fa-long-arrow-left" aria-hidden="true"></i></Link></div>
+                                        <div><h1 id = "pgTitle"> Projects</h1></div>
+                                    </div>
+                                    }
     </div>
     )
 }
