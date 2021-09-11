@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const SplashInfo = (props) => {
     return (
@@ -28,10 +29,10 @@ const SplashInfo = (props) => {
                   <a href="resume-website-placeholder.pdf" id = "resume-av" target = "_blank"><i className="fa fa-address-card" aria-hidden="true"></i></a>
                   <div id="resume" className="hidden">Resume</div>
 
-                  <a href="#" id = "projects-av" onClick = {() => { 
+                  <Link to="/projects" id = "projects-av" onClick = {() => { 
                                                                     props.projectsClick(); 
                                                                     props.statChange();
-                                                                    }}><i className="fa fa-code-fork" aria-hidden="true"></i></a>
+                                                                    }}><i className="fa fa-code-fork" aria-hidden="true"></i></Link>
                   <div id="projects" className="hidden">Projects</div>
               </div>
         </div>
