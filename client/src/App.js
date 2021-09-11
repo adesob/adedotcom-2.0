@@ -1,3 +1,4 @@
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import React, { Component } from 'react'
 import {useState, useEffect} from 'react'
 import './App.css';
@@ -37,20 +38,26 @@ const App = () => {
   
 
   return (
-    <div className = "App">
+    <Router>
+      <div className = "App">        
+                                            
+          {/* {showProjects && <Projects/>} */}
+          
+              <div id="particles-js"></div>
 
-      {/* <p>{apiState.apiResponse}</p> */}
+              
+              <SplashContainer  p = {projects} 
+                                projectsStat = {showProjects} 
+                                projectsClick = {() => {
+                                                        console.log('hello bud');
+                                                        setShowProjects(true);
+                                                      }
+                                                } 
+              /> 
 
-      <div id="particles-js"></div>
-        <SplashContainer p = {projects} projectsStat = {showProjects} projectsClick = {() => {
-                                                  console.log('hello bud');
-                                                  setShowProjects(true);
-                                                }
-                                          } 
-        />
-                                           
-        {/* {showProjects && <Projects/>} */}
-    </div>
+      </div>
+
+    </Router> 
   )
 }
 
