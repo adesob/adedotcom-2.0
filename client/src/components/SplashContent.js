@@ -4,7 +4,7 @@ const SplashContent = (props) => {
     
     return (
         <div className = "contentBx">
-              <h1>Hi!
+              <h1 id = "intro-1">Hi!
                 <span> I'm Ade</span> 
               </h1>  
           </div>

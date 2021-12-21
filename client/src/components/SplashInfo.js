@@ -20,7 +20,7 @@ const SplashInfo = (props) => {
                     </div>
                   </div>
               <div className="cont" id = "cont3"> 
-                  <a href="https://ca.linkedin.com/in/ade-sobodu" id = "linkedin-av" target = "_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href="https://ca.linkedin.com/in/adesobodu" id = "linkedin-av" target = "_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
                   <div id="linkedin" className="hidden">LinkedIn</div>
 
                   <a href="https://github.com/adesob" id = "github-av" target = "_blank"><i className="fa fa-github" aria-hidden="true"></i></a>
